@@ -436,7 +436,7 @@ button {
 .services_img {
     float: cente;
     text-align: center;
-    border: 2px #212121 solid;
+    /* border: 2px #212121 solid; */
     border-radius: 10px;
 }
 .column {
