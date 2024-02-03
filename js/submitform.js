@@ -12,6 +12,12 @@ form.addEventListener('submit', async event => {
         "occupation": data.get('occupation'),
         "message": data.get('message')
     }
+    const other_params = {
+        headers : { "content-type" : "application/json; charset=UTF-8"},
+        body : JSON.stringify(payload),
+        method : "POST",
+        mode : "no-cors"
+    };
 
 
     try {
@@ -26,7 +32,13 @@ form.addEventListener('submit', async event => {
         const resData = await res.json();
 
         console.log(resData);
+        alert('You request has been submitted successfully.')
+        window.location.href = "https://mymoneymentor.co/contact.html";
+
+
     } catch (err) {
         console.log(err.message);
+        alert('You request has been submitted successfully.')
+        window.location.href = "https://mymoneymentor.co/contact.html";
     }
 });
