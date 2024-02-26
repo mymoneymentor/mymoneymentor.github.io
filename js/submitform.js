@@ -9,6 +9,8 @@ form.addEventListener("submit", async (event) => {
   if (searchParams.has("bank")) {
     sourceBank = searchParams.get("bank");
   }
+  
+  sourceBank=data.get("srcbank");
   let payload = {
     phone_number: data.get("phone"),
     name: data.get("name"),
